@@ -1,0 +1,153 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --primary-bg: #1f1f1f;
+    --secondary-bg: #2c2c2c;
+    --accent: #4da8da;
+    --text: #f5f5f5;
+    --muted-text: #b5b5b5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    margin-bottom: 1.5rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background-color: #3a3a3a;
+    flex: 1 1 45%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.time-box span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.time-box label {
+    font-size: 0.8rem;
+    color: var(--muted-text);
+}
+
+/* Mobile optimization */
+@media (min-width: 600px) {
+    .countdown {
+        gap: 1rem;
+    }
+    .time-box {
+        flex: 1;
+    }
+}
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 10;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--muted-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+    background-color: rgba(255,255,255,0.05);
+    color: var(--accent);
+}
+
+/* Page positioning */
+.container {
+    margin-top: 60px; /* space for navbar */
+}
+
+/* Hide sections */
+.hidden {
+    display: none;
+}
+
+.bars-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.bars-list li {
+    background-color: #3a3a3a;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bars-list li i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.bars-list li strong {
+    color: var(--accent);
+}

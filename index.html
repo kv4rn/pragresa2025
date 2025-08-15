@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grabbarna till Prag 2025</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mini Navbar -->
+<nav class="navbar">
+    <button class="nav-btn active" data-target="countdown-section">
+        <i class="fa-solid fa-circle-info"></i>
+    </button>
+    <button class="nav-btn" data-target="hotel-section">
+        <i class="fa-solid fa-hotel"></i>
+    </button>
+    <button class="nav-btn" data-target="flight-section">
+        <i class="fa-solid fa-plane"></i>
+    </button>
+    <button class="nav-btn" data-target="currency-section">
+        <i class="fa-solid fa-dollar-sign"></i>
+    </button>
+    <button class="nav-btn" data-target="bars-section">
+        <i class="fa-solid fa-martini-glass"></i>
+    </button>
+</nav>
+    <div class="container">
+       <!-- Countdown / Info Page -->
+<section id="countdown-section" class="page-section">
+    <h1>Prag 2025!</h1>
+    <p class="subtitle">Vårt äventyr börjar <strong>06:00, 6 Nov 2025</strong></p>
+    <div class="countdown">
+        <div class="time-box">
+            <span id="days">0</span>
+            <label>Dagar</label>
+        </div>
+        <div class="time-box">
+            <span id="hours">0</span>
+            <label>Timmar</label>
+        </div>
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <label>Minuter</label>
+        </div>
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <label>Sekunder</label>
+        </div>
+    </div>
+
+    <!-- Weather Mockup -->
+    <div class="weather-box" style="margin-top: 1.5rem; background-color: #3a3a3a; padding: 1rem; border-radius: 0.8rem;">
+        <h2 style="margin-bottom: 0.5rem;">Väder i Prag</h2>
+        <p style="color: var(--muted-text);">Torsdag, 6 Nov</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+            <i class="fa-solid fa-cloud-sun" style="font-size: 2rem; color: var(--accent);"></i>
+            <div>
+                <strong>12°C</strong><br>
+                Delvis molnigt
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Hotellinfo -->
+<section id="hotel-section" class="page-section hidden">
+    <h1>Hotellinformation</h1>
+    <p class="subtitle">Vi är just nu uppdelade på två hotell.</p>
+
+    <div class="hotel-card">
+        <h2>Central Hotel Prague</h2>
+        <p><i class="fa-solid fa-location-dot"></i> Rybná 8, Prag, 110 00</p>
+        <p><strong>Check-in:</strong> 6 Nov, 14:00</p>
+        <p><strong>Check-out:</strong> 9 Nov, 11:00</p>
+    </div>
+
+    <div class="hotel-card">
+        <h2>Henkes Hotell – KINGS COURT</h2>
+        <p><i class="fa-solid fa-location-dot"></i> U Obecniho Domu 3, Prag, 110 00</p>
+    </div>
+</section>
+
+        <!-- Flyginfo -->
+        <section id="flight-section" class="page-section hidden">
+            <h1>Flyginformation</h1>
+            <p class="subtitle">Här hittar du information om vårt flyg.</p>
+            <div class="flight-info">
+                <p><strong>Avgång:</strong> Arlanda, 11:00 - 6 Nov 2025</p>
+                <p><strong>Ankomst:</strong> Prag, 14:20 - 6 Nov 2025</p>
+                <p><strong>Flygnummer:</strong> 123456789</p>
+            </div>
+        </section>
+
+        <!-- Valuta konverterare -->
+        <section id="currency-section" class="page-section hidden">
+            <h1>Valutakonverterare</h1>
+            <p class="subtitle">Omvandla CZK till SEK snabbt.</p>
+            <div class="currency-tool">
+                <input type="number" id="czk-amount" placeholder="Belopp i CZK" step="0.01" inputmode="decimal" />
+<button id="convert-btn" type="button" onclick="convertCurrency()">Konvertera</button>
+<p id="currency-result"></p>
+            </div>
+        </section>
+
+
+
+        <!-- Bars to Visit -->
+<section id="bars-section" class="page-section hidden">
+    <h1>Barer att besöka</h1>
+    <ul class="bars-list">
+        <li>
+            <i class="fa-solid fa-martini-glass"></i>
+            <strong>Hemingway Bar</strong>
+        </li>
+        <li>
+            <i class="fa-solid fa-mask"></i>
+            <strong>Anonymous Bar</strong>
+        </li>
+        <li>
+            <i class="fa-solid fa-beer-mug-empty"></i>
+            <strong>BeerGeek Bar</strong>
+        </li>
+    </ul>
+</section>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
